@@ -1,0 +1,6 @@
+Host: your-subdomain.example.com
+Port: 8022
+
+Payload:
+CONNECT [host] HTTP/1.1
+Host: your-sni.com
