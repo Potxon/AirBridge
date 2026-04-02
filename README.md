@@ -29,25 +29,30 @@ passwd
 sshd
 ```
 
-🔧 Full Setup Guide
+---
+
+## 🔧 Full Setup Guide
+
 📱 Device A (Server - Termux)
 Install Termux
 Run:
-Bash
-Copy code
+```bash
 pkg update && pkg upgrade -y
 pkg install openssh -y
 passwd
 sshd
+```
+
 Install Cloudflare Tunnel:
-Bash
-Copy code
+```bash
 pkg install cloudflared -y
 cloudflared tunnel login
 cloudflared tunnel create my-tunnel
 cloudflared tunnel route dns my-tunnel your-subdomain.example.com
 cloudflared tunnel run --url ssh://localhost:8022 my-tunnel
-📱 Device B (Client - HA Tunnel)
+```
+
+## 📱 Device B (Client - HA Tunnel)
 Install HA Tunnel Plus
 Create config:
 Host: your-subdomain.example.com
