@@ -55,25 +55,33 @@ cloudflared tunnel run --url ssh://localhost:8022 my-tunnel
 ## 📱 Device B (Client - HA Tunnel)
 Install HA Tunnel Plus
 Create config:
+```bash
 Host: your-subdomain.example.com
 Port: 8022
 Username/Password: Termux credentials
 Enable:
 VPN/TUN Mode
-Example Payload:
-Copy code
+```
 
+## Example Payload:
+```bash
 CONNECT [host] HTTP/1.1[crlf]
 Host: [your SNI or injection host]
 [crlf][crlf]
-🔐 Security Tips
-Use SSH keys instead of passwords
-Keep Termux updated
-Avoid exposing unnecessary ports
-Use strong credentials
-⚠️ Limitations
-Device A must stay online
-High battery usage
-Performance depends on network
-Payload-based routing is not guaranteed
+```
+---
+
+## 🔐 Security Tips
+* Use SSH keys instead of passwords
+* Keep Termux updated
+* Avoid exposing unnecessary ports
+* Use strong credentials
+
+---
+  
+## ⚠️ Limitations
+* Device A must stay online
+* High battery usage
+* Performance depends on network
+* Payload-based routing is not guaranteed
 
