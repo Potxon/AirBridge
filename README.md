@@ -27,6 +27,7 @@ pkg update && pkg upgrade -y
 pkg install openssh cloudflared -y
 passwd
 sshd
+```
 
 🔧 Full Setup Guide
 📱 Device A (Server - Termux)
@@ -70,3 +71,4 @@ Device A must stay online
 High battery usage
 Performance depends on network
 Payload-based routing is not guaranteed
+
