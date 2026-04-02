@@ -27,3 +27,46 @@ pkg update && pkg upgrade -y
 pkg install openssh cloudflared -y
 passwd
 sshd
+
+🔧 Full Setup Guide
+📱 Device A (Server - Termux)
+Install Termux
+Run:
+Bash
+Copy code
+pkg update && pkg upgrade -y
+pkg install openssh -y
+passwd
+sshd
+Install Cloudflare Tunnel:
+Bash
+Copy code
+pkg install cloudflared -y
+cloudflared tunnel login
+cloudflared tunnel create my-tunnel
+cloudflared tunnel route dns my-tunnel your-subdomain.example.com
+cloudflared tunnel run --url ssh://localhost:8022 my-tunnel
+📱 Device B (Client - HA Tunnel)
+Install HA Tunnel Plus
+Create config:
+Host: your-subdomain.example.com
+Port: 8022
+Username/Password: Termux credentials
+Enable:
+VPN/TUN Mode
+Example Payload:
+Copy code
+
+CONNECT [host] HTTP/1.1[crlf]
+Host: [your SNI or injection host]
+[crlf][crlf]
+🔐 Security Tips
+Use SSH keys instead of passwords
+Keep Termux updated
+Avoid exposing unnecessary ports
+Use strong credentials
+⚠️ Limitations
+Device A must stay online
+High battery usage
+Performance depends on network
+Payload-based routing is not guaranteed
