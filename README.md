@@ -52,7 +52,7 @@ cloudflared tunnel route dns my-tunnel your-subdomain.example.com
 cloudflared tunnel run --url ssh://localhost:8022 my-tunnel
 ```
 
-## 📱 Device B (Client - HA Tunnel)
+## 📱 Device B [ANDRIOD!!!] (Client - HA Tunnel)
 Install HA Tunnel Plus
 Create config:
 ```bash
