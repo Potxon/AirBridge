@@ -1,26 +1,26 @@
-# 🌐 TunnelRelay
+#  TunnelRelay
 Remote Internet Relay using Termux + SSH + Cloudflare Tunnel + HA Tunnel
 
 TunnelRelay allows you to route internet traffic from one device (Device A) to another (Device B) using SSH tunneling and mobile payload injection tools like HA Tunnel.
 
 ---
 
-## ⚡ Features
-- 📡 Share internet remotely from Device A to Device B
-- 🔐 SSH-secured connection
-- ☁️ Works with Cloudflare Tunnel (no port forwarding)
-- 📱 Compatible with HA Tunnel configs
-- 🧪 Experimental payload-based routing
+##  Features
+-  Share internet remotely from Device A to Device B
+-  SSH-secured connection
+-  Works with Cloudflare Tunnel (no port forwarding)
+-  Compatible with HA Tunnel configs
+-  Experimental payload-based routing
 
 ---
 
-## 🧭 How It Works
+##  How It Works
 
 Device B → HA Tunnel → Internet → Cloudflare Tunnel → Device A (Termux SSH) → WiFi
 
 ---
 
-## 🚀 Quick Start (Device A)
+##  Quick Start (Device A)
 
 ```bash
 pkg update && pkg upgrade -y
@@ -31,9 +31,9 @@ sshd
 
 ---
 
-## 🔧 Full Setup Guide
+##  Full Setup Guide
 
-📱 Device A (Server - Termux)
+## 📱 Device A (Server - Termux)
 Install Termux
 Run:
 ```bash
@@ -71,7 +71,7 @@ Host: [your SNI or injection host]
 ```
 ---
 
-## 🔐 Security Tips
+##  Security Tips
 * Use SSH keys instead of passwords
 * Keep Termux updated
 * Avoid exposing unnecessary ports
@@ -79,7 +79,7 @@ Host: [your SNI or injection host]
 
 ---
   
-## ⚠️ Limitations
+##  Limitations
 * Device A must stay online
 * High battery usage
 * Performance depends on network
